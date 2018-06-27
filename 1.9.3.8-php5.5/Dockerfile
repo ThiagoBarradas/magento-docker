@@ -45,7 +45,7 @@ COPY scripts/supervisord-zmagento.conf /etc/supervisor/conf.d/supervisord-zmagen
 COPY scripts/setup-magento.sh /setup-magento.sh
 
 # CLEAN
-RUN apt purge && apt-get autoremove -y && apt-get clean
+RUN apt-get purge && apt-get autoremove -y && apt-get clean
 
 # EXPOSE AND RUN
 EXPOSE 80 3306
